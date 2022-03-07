@@ -27,7 +27,7 @@ function Cart() {
   }
 
   return (
-    <div className="flex flex-row gap-4 px-8 justify-around my-6 min-h-screen">
+    <div className="flex flex-col md:flex-row gap-4 px-8 justify-around my-6 min-h-screen">
       <div className="flex flex-col">
         {cartItems && cartItems.length > 0 ? (
           cartItems.map((product) => {

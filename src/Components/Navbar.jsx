@@ -71,17 +71,18 @@ export default function Navbar() {
             </div>
 
             <Disclosure.Panel className="sm:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-2 border-gray-900">
                 {navigation.map((item, idx) => (
                   <NavLink
-                    activeClassName="text-pink-500"
-                    to={`/${item.name}`}
+                    exact={true}
+                    activeClassName="text-gray-900 bg-gray-900"
+                    to={`${item.id}`}
                     key={idx}
                   >
                     <span
                       key={item.name}
                       className={classNames(
-                        'text-white font-medium bg-gray-900 hover:bg-pink-500 hover:text-white',
+                        'text-gray-900 font-medium bg-white hover:bg-gray-900 hover:text-white',
                         'block px-3 py-2 rounded-md text-base font-medium'
                       )}
                     >
